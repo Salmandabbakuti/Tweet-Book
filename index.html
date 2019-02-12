@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TweetBook</title>
+  <link rel="stylesheet" href="index.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <center><h1>TweetBook</h1></center>
+   <div  id ="main">
+  <div style="text-align: center;">
+  <div id= "left" style="text-align: center;">
+<button id="myAccount">My Account<i class="fa fa-user-circle"></i></button>
+<button id="accountEdit"><a href="signup.html">SignUp</a><i class="fa fa-user-plus"></i></button>
+<div style="text-align: center;">
+<input type="text"  id="userAddress" class="example" placeholder="Search Users.." name="search2" style="margin:auto; width:300px">
+<button id="getUser"><i class="fa fa-search"></i></button>
+</div>
+<div id = "response" style="text-align: center;">
+<p><b>Name:</b></p>
+ <span id="getProfileName">??</span>
+<p><b>Bio:</b></p>
+<span id="getProfileBio">??</span>
+<p><b>Location :</p></b>
+  <span id="getProfileLocation">??</span>
+  <p><b>Address :</b></p>
+  <span id="getProfileAddress">??</span>
+</div>
+</div>
+
+<div id= "right" style="text-align: center;">
+ <button id="messages">Messages<i class="fa fa-envelope"></i></button>
+<div style="text-align: center; margin:1px;">
+<input type="text"  id="messageIndex" class="example" placeholder="Search Messages.." name="search2" style="width:200px">
+<button id="getMessage" style="width:80px"><i class="fa fa-search"></i></button>
+</div>
+<div id = "response" style="text-align: center;">
+<p><b>From:</b></p>
+ <span id="getMessageWrittenBy">??</span>
+<p><b>Message:</b></p>
+<span id="getMessageContent">??</span>
+<p><b>Sent On :</b></p>
+  <span id="getMessageTimestamp">??</span>
+</div>
+</br>
+<div style="text-align: center;">
+<input type="text" id="addressTo" style="width: 85%" class="example" placeholder="Enter Recipient Address.." required />
+</div>
+</br>
+<div style="text-align: center;">
+<textarea type="text"  style="width: 90%;" rows="4" id="messageContent" class="content" placeholder="Write Message.." required /></textarea>
+</div>
+<div style="text-align: center;">
+<button id="sendMessage" style="width:90px;">Send</button>
+</div>
+</div>
+</div>
+<div style="text-align: center; margin:1px;">
+<input type="text"  id="searchTweetTitle" class="example" placeholder="Search Tweets.." name="search2" style="width:25%">
+<button id="getTweet" style="width:60px;"><i class="fa fa-search"></i></button>
+</div>
+<div style="text-align: center;">
+<input type="text" id="tweetTitle" placeholder="Enter Your Title" required />
+</div>
+<div style="text-align: center;">
+<textarea type="text" rows="4" id="content" placeholder="What's On Your Mind?" required /></textarea>
+</div>
+<div style="text-align: center;">
+<button id="addTweet" style="width:90px">Add Tweet</button>
+</div>
+</br>
+<div id = "response" style="text-align: center;">
+<p><b>Author:</b></p>
+ <span id="getTweetWrittenBy">??</span>
+<p><b>Content:</b></p>
+<span id="getTweetContent">??</span>
+<p><b>Created On :</b></p>
+<span id="getTweetTimestamp">??</span>
+</div>
+<div style="text-align: center;">
+<button id="deleteTweet" style="width:60px;"><i class="fa fa-trash"></i></button>
+</div>
+ </div>
+ <div id="log" style="text-align: center;"></div>	
+<script>
+document.getElementById("getTweetTimestamp").addEventListener("click", function() {
+  var unixtime = +document.getElementById('getTweetTimestamp').textContent;
+  var newDate = new Date();
+  newDate.setTime(unixtime * 1000);
+  dateString = newDate.toUTCString();
+  document.getElementById("getTweetTimestamp").textContent = dateString;
+});
+document.getElementById("getMessageTimestamp").addEventListener("click", function() {
+  var unixtime = +document.getElementById('getMessageTimestamp').textContent;
+  var newDate = new Date();
+  newDate.setTime(unixtime * 1000);
+  dateString = newDate.toUTCString();
+  document.getElementById("getMessageTimestamp").textContent = dateString;
+});
+</script>
+<script src="web3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src ="index.js"></script>
+</body>
+<footer style="text-align: right;">
+  <h6>&copy Salman Dabbakuti </h6>
+</footer>
+</html>
