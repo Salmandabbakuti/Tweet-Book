@@ -99,23 +99,22 @@ body{
        border: 2px white solid;
        background-color: rgb(245, 239, 239);
         }
-  .notification {
-  background-color: green;
-  font-size: 14px;
+ .notification {
+  background-color:green;
   color: white;
+  margin-top: 12px;
   text-decoration: none;
-  padding: 8px 6px;
+  padding: 8px 5px;
   position: relative;
   display: inline-block;
   border-radius: 2px;
 }
-
  .badge {
-  position: fixed;
-  font-size: 15px;
-  top: 80px;
-  right: 210px;
-  border-width: 80px;
+  position: absolute;
+  top: 90px;
+  right: 200px;
+  padding: 2px 4px;
+  border-radius: 100%;
   background-color: red;
   color: white;
 }
