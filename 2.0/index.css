@@ -77,23 +77,23 @@ body{
         background-repeat : no-repeat;
       }
 #main{
-       width: 1250px;
-       height: 700px;
+       width: 30vw;
+       height: 100vh;
        margin: 0 auto;
        border: 2px white solid;
         background-color: rgb(4, 166, 255);
         }
  #left{
-       width: 415px;
-       height: 700px;
+       width: 30vw;
+       height: 100%;
        margin: 0 auto;
        float: left;
        border: 2px white solid;
        background-color: rgb(245, 239, 239);
         }
   #right{
-       width: 415px;
-       height: 700px;
+       width: 30vw;
+       height: 100vh;
        margin: 0 auto;
        float: right;
        border: 2px white solid;
